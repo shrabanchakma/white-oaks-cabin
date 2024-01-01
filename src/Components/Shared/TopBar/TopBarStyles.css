@@ -1,0 +1,12 @@
+.bg-color {
+  background-image: linear-gradient(
+    to right,
+    white 0% 1%,
+    #dd3238 15% 85%,
+    white 99% 100%
+  );
+}
+
+.base-color {
+  color: #dd3238;
+}
