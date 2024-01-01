@@ -59,7 +59,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="navbar bg-base-100 max-w-6xl mx-auto border flex justify-between">
+      <div className="navbar bg-base-100 max-w-6xl h-[115px] mx-auto  flex justify-between">
         <div className="flex items-baseline">
           {/* small screen */}
           <div className="dropdown">
@@ -93,7 +93,7 @@ const Navbar = () => {
             />
           </a>
         </div>
-        <div className=" hidden lg:flex border ">
+        <div className=" hidden lg:flex  ">
           <ul className="menu menu-horizontal ml-[85px] mb-1 flex items-center">
             {navlinks}
           </ul>
