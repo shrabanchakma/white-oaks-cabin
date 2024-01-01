@@ -1,15 +1,17 @@
 import DefaultButton from "../../../Shared/DefaultButton/DefaultButton";
 import "./AboutUsStyles.css";
+import icon from "../../../../../public/icon01.png";
 const AboutUs = () => {
   return (
     <div className="h-[670px] max-w-6xl mx-auto flex items-center">
-      <div className="w-1/2">
+      <div className="w-1/2 relative -top-[88px]">
         {/* about us details */}
         <h3 className="font-bold text-lg">ABOUT US</h3>
         <h1 className="font-bold text-4xl">
           COMFORTABLE <span className="text-[#dd3238]">CABINS</span>
         </h1>
-        <p>
+        <img src={icon} alt="" />
+        <p className="font-thin mb-12">
           At White Oaks Cabins, we believe that getting back to nature should be
           a comfortable and enjoyable process. Our cabins feature all the
           amenities you need for a comfortable stay while providing a rustic
