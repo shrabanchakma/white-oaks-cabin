@@ -1,0 +1,11 @@
+.nav-option {
+  @apply font-bold text-lg;
+}
+
+.nav-option-active {
+  @apply font-bold text-[#FF4B4B] text-lg hover:bg-white;
+}
+
+.nav-option-hover {
+  @apply hover:text-[#FF4B4B] hover:bg-white text-lg;
+}

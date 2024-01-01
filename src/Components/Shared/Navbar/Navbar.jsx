@@ -1,15 +1,13 @@
 import { Link, NavLink } from "react-router-dom";
-import DefaultButton from "./DefaultButton/DefaultButton";
-
+import DefaultButton from "../DefaultButton/DefaultButton";
+import "./NavbarStyles.css";
 const Navbar = () => {
   const navlinks = (
     <>
       <li>
         <NavLink
           className={({ isActive }) =>
-            isActive
-              ? "font-bold text-[#FF4B4B]"
-              : "font-bold hover:text-[#FF4B4B] hover:bg-white"
+            isActive ? "nav-option-active" : "nav-option nav-option-hover"
           }
           to={"/"}
         >
@@ -19,9 +17,7 @@ const Navbar = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-            isActive
-              ? "font-bold text-[#FF4B4B]"
-              : "font-bold hover:text-[#FF4B4B] hover:bg-white"
+            isActive ? "nav-option-active" : "nav-option nav-option-hover"
           }
           to={"/about-us"}
         >
@@ -31,9 +27,7 @@ const Navbar = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-            isActive
-              ? "font-bold text-[#FF4B4B]"
-              : "font-bold hover:text-[#FF4B4B] hover:bg-white"
+            isActive ? "nav-option-active" : "nav-option nav-option-hover"
           }
           to={"/testimonials"}
         >
@@ -43,9 +37,7 @@ const Navbar = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-            isActive
-              ? "font-bold text-[#FF4B4B]"
-              : "font-bold hover:text-[#FF4B4B] hover:bg-white"
+            isActive ? "nav-option-active" : "nav-option nav-option-hover"
           }
           to={"/blog"}
         >
@@ -55,24 +47,21 @@ const Navbar = () => {
       <li>
         <NavLink
           className={({ isActive }) =>
-            isActive
-              ? "font-bold text-[#FF4B4B]"
-              : "font-bold hover:text-[#FF4B4B] hover:bg-white"
+            isActive ? "nav-option-active" : "nav-option nav-option-hover"
           }
           to={"/contact-us"}
         >
           CONTACT US
         </NavLink>
       </li>
-
-      <DefaultButton text={"OUR CABINS"} />
     </>
   );
 
   return (
     <>
-      <div className="navbar bg-base-100 max-w-5xl mx-auto">
-        <div className="navbar-start flex items-baseline">
+      <div className="navbar bg-base-100 max-w-6xl mx-auto border flex justify-between">
+        <div className="flex items-baseline">
+          {/* small screen */}
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -97,14 +86,20 @@ const Navbar = () => {
               {navlinks}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl hover:bg-white">
-            <img src="https://static.wixstatic.com/media/446d92_5ad9bddad4824d36a3d57ef511535607~mv2.png/v1/fill/w_100,h_100,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/White%20Oaks%20Cabins.png" />
+          <a className="btn btn-ghost text-xl hover:bg-white ">
+            <img
+              className="w-[100px]"
+              src="https://static.wixstatic.com/media/446d92_5ad9bddad4824d36a3d57ef511535607~mv2.png/v1/fill/w_100,h_100,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/White%20Oaks%20Cabins.png"
+            />
           </a>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 flex items-center">
+        <div className=" hidden lg:flex border ">
+          <ul className="menu menu-horizontal ml-[85px] mb-1 flex items-center">
             {navlinks}
           </ul>
+        </div>
+        <div className="mr-[14px] mb-2">
+          <DefaultButton text={"OUR CABINS"} />
         </div>
       </div>
     </>

@@ -1,4 +1,4 @@
-import Navbar from "../../../Shared/Navbar";
+import Navbar from "../../../Shared/Navbar/Navbar";
 import TopBar from "../../../Shared/TopBar/TopBar";
 
 const Home = () => {
