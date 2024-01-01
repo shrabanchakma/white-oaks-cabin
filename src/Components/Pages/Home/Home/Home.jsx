@@ -1,5 +1,6 @@
 import Navbar from "../../../Shared/Navbar/Navbar";
 import TopBar from "../../../Shared/TopBar/TopBar";
+import AboutUs from "../AboutUs/AboutUs";
 import Banner from "../Banner/Banner";
 
 const Home = () => {
@@ -8,6 +9,7 @@ const Home = () => {
       <TopBar />
       <Navbar />
       <Banner />
+      <AboutUs />
     </div>
   );
 };
