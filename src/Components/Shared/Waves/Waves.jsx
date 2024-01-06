@@ -1,7 +1,8 @@
+import curve from "../../../assets/Curve/curve.svg";
 const Waves = () => {
   return (
     <>
-      <svg
+      {/* <svg
         className="absolute bottom-[.25rem] left-[23rem]"
         width="100%"
         height="100%"
@@ -43,7 +44,8 @@ const Waves = () => {
         <g>
           <use xlinkHref="#wavepath2" y="330" fill="#ffffff"></use>
         </g>
-      </svg>
+      </svg> */}
+      <img className="relative -bottom-[362px]" src={curve} alt="" />
     </>
   );
 };

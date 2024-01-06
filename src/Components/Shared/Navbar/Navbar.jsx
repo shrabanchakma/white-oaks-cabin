@@ -98,7 +98,7 @@ const Navbar = () => {
             {navlinks}
           </ul>
         </div>
-        <div className="mr-[14px] mb-2">
+        <div className="mr-[14px] mb-2 z-10">
           <DefaultButton text={"OUR CABINS"} />
         </div>
       </div>

@@ -2,6 +2,7 @@ import Navbar from "../../../Shared/Navbar/Navbar";
 import TopBar from "../../../Shared/TopBar/TopBar";
 import AboutUs from "../AboutUs/AboutUs";
 import Banner from "../Banner/Banner";
+import Services from "../Services/Services";
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Navbar />
       <Banner />
       <AboutUs />
+      <Services />
     </div>
   );
 };
