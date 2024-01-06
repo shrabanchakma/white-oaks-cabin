@@ -1,4 +1,5 @@
 import curve from "../../../assets/Curve/curve.svg";
+import "./WavesStyles.css";
 const Waves = () => {
   return (
     <>
@@ -46,6 +47,21 @@ const Waves = () => {
         </g>
       </svg> */}
       <img className="relative -bottom-[362px]" src={curve} alt="" />
+
+      {/* <div className="dkukWC MBOSCN" data-testid="bottom-divider">
+        <div
+          // style="--divider-layer-i:1"
+          className="FRCqDF"
+          data-testid="divider-layer-1"
+          data-divider-layer="1"
+        ></div>
+        <div
+          // style="--divider-layer-i:0"
+          className="FRCqDF"
+          data-testid="divider-layer-0"
+          data-divider-layer="0"
+        ></div>
+      </div> */}
     </>
   );
 };

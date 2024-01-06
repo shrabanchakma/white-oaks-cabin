@@ -1,0 +1,72 @@
+.dkukWC {
+  --divider-pin-height__: min(1, calc(var(--divider-layers-pin-factor__) + 1));
+  --divider-pin-layer-height__: var(--divider-layers-pin-factor__);
+  --divider-pin-border__: min(
+    1,
+    calc(var(--divider-layers-pin-factor__) / -1 + 1)
+  );
+  height: calc(
+    var(--divider-height__) + var(--divider-pin-height__) *
+      var(--divider-layers-size__) * var(--divider-layers-y__)
+  );
+}
+.dkukWC,
+.dkukWC .FRCqDF {
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.dkukWC .FRCqDF {
+  --divider-layer-i__: var(--divider-layer-i, 0);
+  background-position: left
+    calc(
+      50% + var(--divider-offset-x__) + var(--divider-layers-x__) *
+        var(--divider-layer-i__)
+    )
+    bottom;
+  background-repeat: repeat-x;
+  border-bottom-style: solid;
+  border-bottom-width: calc(
+    var(--divider-pin-border__) * var(--divider-layer-i__) *
+      var(--divider-layers-y__)
+  );
+  height: calc(
+    var(--divider-height__) + var(--divider-pin-layer-height__) *
+      var(--divider-layer-i__) * var(--divider-layers-y__)
+  );
+  opacity: calc(1 - var(--divider-layer-i__) / (var(--divider-layer-i__) + 1));
+}
+.MBOSCN {
+  --divider-height__: var(--divider-bottom-height, auto);
+  --divider-offset-x__: var(--divider-bottom-offset-x, 0px);
+  --divider-layers-size__: var(--divider-bottom-layers-size, 0);
+  --divider-layers-y__: var(--divider-bottom-layers-y, 0px);
+  --divider-layers-x__: var(--divider-bottom-layers-x, 0px);
+  --divider-layers-pin-factor__: var(--divider-bottom-layers-pin-factor, 0);
+  border-bottom: var(--divider-bottom-padding, 0) solid
+    var(--divider-bottom-color, currentColor);
+  bottom: 0;
+  opacity: var(--divider-bottom-opacity, 1);
+  transform: var(--divider-bottom-flip, none);
+}
+
+.MBOSCN .FRCqDF {
+  background-image: var(--divider-bottom-image, none);
+  background-size: var(--divider-bottom-size, contain);
+  border-color: var(--divider-bottom-color, currentColor);
+  bottom: 0;
+  filter: var(--divider-bottom-filter, none);
+}
+
+.MBOSCN .FRCqDF[data-divider-layer="1"] {
+  display: var(--divider-bottom-layer-1-display, block);
+}
+
+.MBOSCN .FRCqDF[data-divider-layer="2"] {
+  display: var(--divider-bottom-layer-2-display, block);
+}
+
+.MBOSCN .FRCqDF[data-divider-layer="3"] {
+  display: var(--divider-bottom-layer-3-display, block);
+}
