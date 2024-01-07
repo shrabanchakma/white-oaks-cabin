@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import scribble from "../../../../assets/PaintScribble/paint-scribble.svg";
-import scribbleFlipped from "../../../../assets/PaintScribble/paint-scribble-flipped.svg";
 import icon from "../../../../assets/icons/icon-inverted.png";
 import "./ServicesStyle.css";
 import DefaultButton from "../../../Shared/DefaultButton/DefaultButton";
@@ -67,7 +66,6 @@ const Services = () => {
             view all of our available cabins
           </button>
         </div>
-        <img src={scribbleFlipped} alt="" />
       </div>
     </>
   );

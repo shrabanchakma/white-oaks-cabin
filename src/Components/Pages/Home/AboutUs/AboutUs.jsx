@@ -1,6 +1,6 @@
 import DefaultButton from "../../../Shared/DefaultButton/DefaultButton";
 import "./AboutUsStyles.css";
-import icon from "../../../../../public/icon01.png";
+import icon from "../../../../assets/icons/icon.png";
 const AboutUs = () => {
   return (
     <div className="h-[670px] max-w-6xl mx-auto flex items-center">

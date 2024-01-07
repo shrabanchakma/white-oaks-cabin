@@ -2,6 +2,7 @@ import Navbar from "../../../Shared/Navbar/Navbar";
 import TopBar from "../../../Shared/TopBar/TopBar";
 import AboutUs from "../AboutUs/AboutUs";
 import Banner from "../Banner/Banner";
+import FeatureSectionOne from "../FeatureSectionOne/FeatureSectionOne";
 import Services from "../Services/Services";
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
       <Banner />
       <AboutUs />
       <Services />
+      <FeatureSectionOne />
     </div>
   );
 };
