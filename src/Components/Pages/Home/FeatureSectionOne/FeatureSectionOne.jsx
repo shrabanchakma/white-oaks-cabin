@@ -6,12 +6,13 @@ const FeatureSectionOne = () => {
     <div className="w-[1903px] h-[540px]">
       <img src={scribbleFlipped} className="relative -top-[1px]" alt="" />
       <div className="w-3/5 flex mx-auto py-20">
-        <div className="w-2/5">
+        <div className="w-2/5 p-4">
           {/* features-text */}
-          <h2>THE WHITE OAKS CABINS DIFFERENCE</h2>
-          <h1>
-            THE WHITE OAKS CABINS DIFFERENCE PRIVATE CABINS WITH <br />
-            HOSPITALITY
+          <h2 className="font-bold">THE WHITE OAKS CABINS DIFFERENCE</h2>
+          <h1 className="font-bold text-3xl">
+            PRIVATE CABINS WITH
+            <br />
+            <span className="text-[#ff4b4b]">HOSPITALITY</span>
           </h1>
           <img src={icon} alt="" />
           <p>
@@ -19,7 +20,7 @@ const FeatureSectionOne = () => {
             24/7 guest support so you can travel without worry.
           </p>
         </div>
-        <div className="grid grid-cols-3 w-3/5">
+        <div className="grid grid-cols-3 w-3/5 ">
           {/* features- */}
           <div>
             <div className="bg-[#ff4b4b] rounded-full flex items-center justify-center h-[70px] w-[70px]">
