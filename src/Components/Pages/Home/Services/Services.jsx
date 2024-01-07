@@ -32,17 +32,17 @@ const Services = () => {
             <img className="" src={icon} alt="" />
           </div>
         </div>
-        <div className="mt-16 grid grid-cols-3 w-3/5 mx-auto">
+        <div className="mt-16 grid grid-cols-3 w-3/5 mx-auto ">
           {cabins.map((cabin) => (
             <div
               key={cabin.id}
-              className="card w-[350px] h-[550px] bg-base-100 shadow-xl rounded-none"
+              className="card w-[350px] h-full bg-base-100 shadow-xl rounded-none"
             >
-              <figure className=" border-[6px] border-white img-shadow flex">
+              <figure className=" border-[6px] border-white img-shadow">
                 <img
                   src={cabin.image01}
                   alt="cabin"
-                  className="h-[250px] w-[338px] flex-grow"
+                  className="min-h-[250px] w-[338px]  object-cover"
                 />
               </figure>
 
@@ -61,7 +61,7 @@ const Services = () => {
             </div>
           ))}
         </div>
-        <div className="flex justify-center mt-[62px]">
+        <div className="flex justify-center mt-[32px]">
           <button className="secondary-btn uppercase ">
             view all of our available cabins
           </button>
