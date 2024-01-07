@@ -1,11 +1,25 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import scribble from "../../../../assets/PaintScribble/paint-scribble.svg";
 import icon from "../../../../assets/icons/icon-inverted.png";
+import "./ServicesStyle.css";
+import DefaultButton from "../../../Shared/DefaultButton/DefaultButton";
 const Services = () => {
+  const [cabins, setCabins] = useState([]);
   useEffect(() => {
     fetch("./cabins.json")
       .then((res) => res.json(res))
-      .then((data) => console.log(data.length));
+      .then((data) => {
+        const remainingCabins = data.slice(0, 3);
+        const modifiedData = remainingCabins.map((cabin) => ({
+          ...cabin,
+          details: {
+            "image01-description01": cabin.details[
+              "image01-description01"
+            ].slice(0, cabin.details["image01-description01"].length / 3),
+          },
+        }));
+        setCabins(modifiedData);
+      });
   }, []);
   return (
     <>
@@ -18,21 +32,39 @@ const Services = () => {
             <img className="" src={icon} alt="" />
           </div>
         </div>
-        <div className="card w-96 bg-base-100 shadow-xl">
-          <figure className="px-10 pt-10">
-            <img
-              src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
-              alt="Shoes"
-              className="rounded-xl"
-            />
-          </figure>
-          <div className="card-body items-center text-center">
-            <h2 className="card-title">Shoes!</h2>
-            <p>If a dog chews shoes whose shoes does he choose?</p>
-            <div className="card-actions">
-              <button className="btn btn-primary">Buy Now</button>
+        <div className="mt-16 grid grid-cols-3 w-3/5 mx-auto">
+          {cabins.map((cabin) => (
+            <div
+              key={cabin.id}
+              className="card w-[350px] h-[550px] bg-base-100 shadow-xl rounded-none"
+            >
+              <figure className=" border-[6px] border-white img-shadow flex">
+                <img
+                  src={cabin.image01}
+                  alt="cabin"
+                  className="h-[250px] w-[338px] flex-grow"
+                />
+              </figure>
+
+              <div className="card-body items-center text-center p-1">
+                <h2 className="font-bold text-2xl text-[#ff4b4b] mt-5">
+                  {cabin.title}
+                </h2>
+                <p>{cabin.details["image01-description01"]}</p>
+                <p className="font-bold text-2xl text-[#ff4b4b]">
+                  $147 Avg. / night
+                </p>
+                <div className="card-actions pb-4">
+                  <DefaultButton text="BOOK NOW" />
+                </div>
+              </div>
             </div>
-          </div>
+          ))}
+        </div>
+        <div className="flex justify-center mt-[62px]">
+          <button className="secondary-btn uppercase ">
+            view all of our available cabins
+          </button>
         </div>
       </div>
     </>
