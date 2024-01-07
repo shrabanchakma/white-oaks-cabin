@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import scribble from "../../../../assets/PaintScribble/paint-scribble.svg";
+import scribbleFlipped from "../../../../assets/PaintScribble/paint-scribble-flipped.svg";
 import icon from "../../../../assets/icons/icon-inverted.png";
 import "./ServicesStyle.css";
 import DefaultButton from "../../../Shared/DefaultButton/DefaultButton";
@@ -32,11 +33,11 @@ const Services = () => {
             <img className="" src={icon} alt="" />
           </div>
         </div>
-        <div className="mt-16 grid grid-cols-3 w-3/5 mx-auto ">
+        <div className="mt-16 grid grid-cols-3 w-3/5 mx-auto">
           {cabins.map((cabin) => (
             <div
               key={cabin.id}
-              className="card w-[350px] h-full bg-base-100 shadow-xl rounded-none"
+              className="card w-[350px] h-full bg-base-100 shadow-xl rounded-none hover:cursor-pointer hover:scale-105 ease-in-out duration-500"
             >
               <figure className=" border-[6px] border-white img-shadow">
                 <img
@@ -54,7 +55,7 @@ const Services = () => {
                 <p className="font-bold text-2xl text-[#ff4b4b]">
                   $147 Avg. / night
                 </p>
-                <div className="card-actions pb-4">
+                <div className="card-actions pb-4 ">
                   <DefaultButton text="BOOK NOW" />
                 </div>
               </div>
@@ -66,6 +67,7 @@ const Services = () => {
             view all of our available cabins
           </button>
         </div>
+        <img src={scribbleFlipped} alt="" />
       </div>
     </>
   );
