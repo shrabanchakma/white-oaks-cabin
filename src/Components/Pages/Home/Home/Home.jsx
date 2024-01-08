@@ -4,6 +4,7 @@ import AboutUs from "../AboutUs/AboutUs";
 import Banner from "../Banner/Banner";
 import CabinGallery from "../CabinGallery/CabinGallery";
 import FeatureSectionOne from "../FeatureSectionOne/FeatureSectionOne";
+import FeatureSectionTwo from "../FeatureSectionTwo/FeatureSectionTwo";
 import Services from "../Services/Services";
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       <Services />
       <FeatureSectionOne />
       <CabinGallery />
+      <FeatureSectionTwo />
     </div>
   );
 };

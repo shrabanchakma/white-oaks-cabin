@@ -1,5 +1,6 @@
 import LightGallery from "lightgallery/react/Lightgallery.es5";
-import wave from "../../../../assets/Waves/wave01.svg";
+import wave01 from "../../../../assets/Waves/wave01.svg";
+import wave02 from "../../../../assets/Waves/wave02.svg";
 import lgThumbnail from "lightgallery/plugins/thumbnail";
 import lgZoom from "lightgallery/plugins/zoom";
 import { useEffect, useState } from "react";
@@ -34,8 +35,8 @@ const CabinGallery = () => {
 
   return (
     <>
-      <img src={wave} alt="" />
-      <div className="min-h-[1903px] bg-[#FF4B4B]" speed={500}>
+      <img src={wave01} alt="" />
+      <div className="min-h-[1470px] bg-[#FF4B4B]" speed={500}>
         <DefaultHeading
           heading="photo gallery"
           subHeading="our cabins"
@@ -50,6 +51,7 @@ const CabinGallery = () => {
           {generateImages()}
         </LightGallery>
       </div>
+      <img src={wave02} alt="" />
     </>
   );
 };

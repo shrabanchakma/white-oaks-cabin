@@ -1,26 +1,24 @@
-import scribbleFlipped from "../../../../assets/PaintScribble/paint-scribble-flipped.svg";
 import icon from "../../../../assets/icons/icon.png";
-const FeatureSectionOne = () => {
+const FeatureSectionTwo = () => {
   return (
-    <div className="w-[1903px] h-[540px]">
-      <img src={scribbleFlipped} className="relative -top-[1px]" alt="" />
-      <div className="w-3/5 flex mx-auto py-20">
+    <div className="w-[1903px] h-[450px]">
+      <div className="w-3/5 flex flex-row-reverse mx-auto py-20">
         <div className="w-2/5 p-4">
           {/* features-text */}
           <h2 className="font-bold">THE WHITE OAKS CABINS DIFFERENCE</h2>
           <h1 className="font-bold text-3xl">
-            PRIVATE CABINS WITH
-            <br />
-            <span className="text-[#ff4b4b]">HOSPITALITY</span>
+            A PEACEFUL BREATH IN OUR{" "}
+            <span className="text-[#ff4b4b]">CABINS</span>
           </h1>
           <img src={icon} alt="" />
           <p>
-            We promise private, professionally-cleaned vacation rentals with
-            24/7 guest support so you can travel without worry.
+            Choose White Oaks Cabins for your ideal cabin getaway. Enjoy
+            breathtaking scenery, luxurious comfort, and personalized service.
+            Book now and create lasting memories.
           </p>
         </div>
         <div className="grid grid-cols-3 w-3/5 ">
-          {/* features- */}
+          {/* feature01 */}
           <div>
             <div className="bg-[#ff4b4b] rounded-full flex items-center justify-center h-[70px] w-[70px]">
               <svg
@@ -40,15 +38,14 @@ const FeatureSectionOne = () => {
                 />
               </svg>
             </div>
-            <h1 className="font-bold text-[#ff4b4b] text-xl">BEST RATE</h1>
+            <h1 className="font-bold text-[#ff4b4b] text-xl">FACILITIES</h1>
             <img src={icon} alt="" />
             <p>
-              You’re guaranteed to book the best rates on our vacation homes at{" "}
-              <a href="whiteoakscabins.org" className="text-[#ff4b4b]">
-                whiteoakscabins.org
-              </a>
+              Your rustic retreat in the heart of nature. Cozy cabins, modern
+              amenities, and endless outdoor adventures await.
             </p>
           </div>
+          {/* feature02 */}
           <div>
             <div className="bg-[#ff4b4b] rounded-full flex items-center justify-center h-[70px] w-[70px]">
               <svg
@@ -63,16 +60,14 @@ const FeatureSectionOne = () => {
                 />
               </svg>
             </div>
-            <h1 className="font-bold text-[#ff4b4b] text-xl">REST EASY</h1>
+            <h1 className="font-bold text-[#ff4b4b] text-xl">OUTDOOR SPORTS</h1>
             <img src={icon} alt="" />
             <p>
-              If plans change or the vacation rental isn’t what we promised,
-              we’re here to{" "}
-              <a href="whiteoakscabins.org" className="text-[#ff4b4b]">
-                help make it right.
-              </a>
+              Your gateway to outdoor sports heaven. Explore hiking, biking,
+              fishing, and more in the heart of nature's playground.
             </p>
           </div>
+          {/* feature03 */}
           <div>
             <div className="bg-[#ff4b4b] rounded-full flex items-center justify-center h-[70px] w-[70px]">
               <svg
@@ -90,15 +85,11 @@ const FeatureSectionOne = () => {
                 />
               </svg>
             </div>
-            <h1 className="font-bold text-[#ff4b4b] text-xl">HOSPITALITY</h1>
+            <h1 className="font-bold text-[#ff4b4b] text-xl">RIVER VIEW</h1>
             <img src={icon} alt="" />
-            <p>
-              <a href="whiteoakscabins.org" className="text-[#ff4b4b]">
-                White oaks cabins
-              </a>
-              White oaks cabins offers a luxurious opportunity to experience
-              nature in a whole new way.
-            </p>
+            {
+              " Experience serenity at River View Cabin, nestled in the heart of White Oaks Cabins, with nature's embrace along the White Oaks River."
+            }
           </div>
         </div>
       </div>
@@ -106,4 +97,4 @@ const FeatureSectionOne = () => {
   );
 };
 
-export default FeatureSectionOne;
+export default FeatureSectionTwo;
