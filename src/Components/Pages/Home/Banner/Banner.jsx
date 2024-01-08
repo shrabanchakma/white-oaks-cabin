@@ -1,5 +1,5 @@
 import DefaultButton from "../../../Shared/DefaultButton/DefaultButton";
-import Waves from "../../../Shared/Waves/Waves";
+import wave from "../../../../assets/Waves/wave03.svg";
 
 const Banner = () => {
   return (
@@ -37,7 +37,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <Waves />
+      <img className="relative -bottom-[281px]" src={wave} alt="" />
     </div>
   );
 };
