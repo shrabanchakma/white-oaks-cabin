@@ -18,11 +18,16 @@ const CabinGallery = () => {
 
   const generateImages = () => {
     return cabinImages?.map((image, idx) => (
-      <div key={idx} href={image}>
+      <div
+        key={idx}
+        href={image}
+        className="group border-white border-[5px] overflow-hidden relative"
+      >
         <img
-          className="w-[280px] h-[267px] object-cover  border-white border-[5px]"
+          className="w-[280px] h-[267px] object-cover ease-in-out duration-500  scale-100 group-hover:scale-110 "
           src={image}
         ></img>
+        <div className="transition-opacity bg-black absolute inset-0 opacity-0  group-hover:opacity-20 backdrop-blur-md "></div>
       </div>
     ));
   };
