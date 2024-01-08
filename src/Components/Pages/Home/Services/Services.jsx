@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import scribble from "../../../../assets/PaintScribble/paint-scribble.svg";
-import icon from "../../../../assets/icons/icon-inverted.png";
 import "./ServicesStyle.css";
 import DefaultButton from "../../../Shared/DefaultButton/DefaultButton";
+import DefaultHeading from "../../../Shared/DefaultHeading/DefaultHeading";
 const Services = () => {
   const [cabins, setCabins] = useState([]);
   useEffect(() => {
@@ -25,13 +25,11 @@ const Services = () => {
     <>
       <img src={scribble} alt="" />
       <div className="h-[900px] bg-[#ff4b4b]">
-        <div className="text-white text-center pt-[50px]">
-          <h3 className=" font-semibold text-[16px]">SERVICES</h3>
-          <h1 className="text-[40px] font-bold">AVAILABLE CABINS</h1>
-          <div className="w-full flex justify-center ">
-            <img className="" src={icon} alt="" />
-          </div>
-        </div>
+        <DefaultHeading
+          heading="available cabins"
+          subHeading="services"
+          isInverted={true}
+        />
         <div className="mt-16 grid grid-cols-3 w-3/5 mx-auto">
           {cabins.map((cabin) => (
             <div
